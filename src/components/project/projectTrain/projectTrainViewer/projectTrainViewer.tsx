@@ -26,7 +26,7 @@ const GraphViewer = styled.div`
 	max-width: 960px;
 `;
 
-const ProjectTrainViewer = ({ history }: ProjectTrainViewerProps) => {
+const ProjectTrainViewer = ({ history, fetchTrainHistory, setCurrentTrainHistory }: ProjectTrainViewerProps) => {
 	const { data: projectTrainEpochs, loading } = useProjectTrainEpochs(history.trainNo);
 	const [currentProjectTrainEpochs, setCurrentProjectTrainEpochs] = useState<Array<Epoch> | null>(null);
 	const [logs, setLogs] = useState<string[]>(new Array<string>(0));

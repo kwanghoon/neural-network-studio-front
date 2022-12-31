@@ -7,17 +7,9 @@ export type CustomSelectInputProps = {
 	onChange: (e: any) => void;
 	value: string;
 	propertyCandidates: Array<string | number>;
-	style?: any;
 };
 
-export const CustomSelectInput = ({
-	title,
-	onChange,
-	name,
-	value,
-	propertyCandidates,
-	style,
-}: CustomSelectInputProps) => {
+export const CustomSelectInput = ({ title, onChange, name, value, propertyCandidates }: CustomSelectInputProps) => {
 	const candidateComponent = useMemo(
 		() =>
 			propertyCandidates.map((candidate) => {
@@ -31,7 +23,7 @@ export const CustomSelectInput = ({
 	);
 
 	return (
-		<div className="box" style={style}>
+		<div className="box" style={{ color: 'red' }}>
 			<div className="tit">{title}</div>
 			<Select disableUnderline name={name} onChange={onChange} value={value}>
 				<MenuItem value={value}>{value}</MenuItem>

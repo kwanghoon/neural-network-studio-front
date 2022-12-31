@@ -3,6 +3,7 @@ import useSWR from 'swr';
 import { AxiosError } from 'axios';
 import { useEffect } from 'react';
 import { UserProfile } from '../API/User/types';
+import { DefaultUserProfile } from '../API/User/defaultuserprofile';
 import { getUserProfile } from '../API/User';
 
 export enum UserType {
@@ -35,7 +36,9 @@ const useAuthentication = () => {
 				if (e && e.isAxiosError) {
 					const status = (e as AxiosError).response?.status;
 					if (status === 401 || status === 404) {
-						return null;
+						/* Just return a default user profile */
+						return new DefaultUserProfile();
+						/* return null; */
 					}
 				}
 				throw e;
