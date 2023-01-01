@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { StaticPath } from '../../PagePathConsts';
+import { DynamicPath, StaticPath } from '../../PagePathConsts';
 
 const LandingMain = () => {
 	return (
@@ -9,7 +9,7 @@ const LandingMain = () => {
 				<div className="tit">
 					<strong>GUI로 쉽게 하는</strong> 딥러닝 통합 개발환경
 				</div>
-				<Link className="btn-link" to={`${StaticPath.DASHBOARD_PROJECTS}`} type="button">
+				<Link className="btn-link" to={`${DynamicPath.PROJECT}`} type="button">
 					Get Start
 				</Link>
 			</div>

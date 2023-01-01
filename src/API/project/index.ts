@@ -8,6 +8,7 @@ import {
 	IProjectInfo,
 	ProjectConfig,
 	ProjectConfigDto,
+	Project,
 	Projects,
 } from './types';
 import graphToLayouts from '../../core/reactFlow/GraphEngine';
