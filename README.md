@@ -4,10 +4,26 @@
 데모 영상 : https://www.youtube.com/watch?v=to0KIZwbYeQ
 
 # 설치 및 실행
-- npm 설치
+- npm 설치 
+(리눅스)
+```
+ $ sudo apt-get install npm
+```
+(윈도우즈에서 [nvm-windows](https://github.com/coreybutler/nvm-windows) 설치 후 npm 16.0.0 설치)
+```
+ $ nvm install 16.0.0
+```
 - typescript 4.3.4 버전 로컬 디렉토리에 설치 
 ```
  $ npm install --save-dev typescript@4.3.4
+```
+- 개발용 컨피규레이션 파일 준비
+```
+ $ cp envTemplate.text .local.development.local
+ $ cat .local.development.local
+   REACT_APP_SERVER_PREFIX=localhost
+   REACT_APP_TEST_SERVER_PREFIX=
+   REACT_APP_SOCKET_SERVER_PREFIX=
 ```
 - 실행 
 ```
